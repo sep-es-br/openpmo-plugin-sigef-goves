@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: openpmo-plugin-sigef-goves
+
+pentaho:
+  api:
+    userId: ${pentahoBI.userId}
+    password: ${pentahoBI.password}
+    uo:
+      url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_uo_all.cda&dataAccessId=api_uo_all"
+    po:
+      url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_po_uo.cda&dataAccessId=api_po_uo&parampCodUo="
+    po_liquidado:
+      url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_po_liquidado.cda&dataAccessId=api_po_liquidado&parampCodPo="
+    contratos:
+      url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_contrato_convenio.cda&dataAccessId=api_contrato_convenio&paramuo=%s&paramde=%d&paramate=%d"
+    liquidacao:
+      url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_po_instrumentos_valores.cda&dataAccessId=api_po_instrumento_valores&paramcod_uo=%s&paramcod_po=%s&paramcod_contrato=%s&paramcod_convenio=%s&paramcod_categoria=%s&paramcod_fonte=%s"

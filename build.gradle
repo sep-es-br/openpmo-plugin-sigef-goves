@@ -1,0 +1,48 @@
+plugins { 
+    id 'org.springframework.boot' version '2.2.12.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java-library'; 
+    id 'maven-publish';
+}
+
+group = 'com.github.sep-es-br'
+version = '1.0.0'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories { 
+    mavenCentral() 
+    mavenLocal()
+    maven {
+        url "https://repo.spring.io/plugins-release/"
+    }
+    maven {
+        url "https://jasperreports.sourceforge.net/maven2/"
+    }
+}
+publishing { 
+    publications { 
+        mavenJava(MavenPublication) { 
+            artifactId = 'openpmo-plugin-sigef-goves'; 
+            from components.java 
+        } 
+    } 
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-data-neo4j'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.12'
+    
+    api 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.22.1';
+    implementation files('lib/openpmo-plugin-sigef-interface-1.0.0.jar');
+}
