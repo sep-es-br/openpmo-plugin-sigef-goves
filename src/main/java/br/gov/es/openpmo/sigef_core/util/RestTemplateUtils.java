@@ -1,6 +1,6 @@
-package br.gov.es.pmo.sigef_core.util;
+package br.gov.es.openpmo.sigef_core.util;
 
-import br.gov.es.pmo.sigef_core.exception.GlobalException;
+import br.gov.es.openpmo.sigef_core.exception.GlobalException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Base64;

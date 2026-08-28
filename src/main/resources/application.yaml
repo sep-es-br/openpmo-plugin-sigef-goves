@@ -16,3 +16,5 @@ pentaho:
       url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_contrato_convenio.cda&dataAccessId=api_contrato_convenio&paramuo=%s&paramde=%d&paramate=%d"
     liquidacao:
       url: "https://10.243.135.5/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/plano_orcamentario/api_po_instrumentos_valores.cda&dataAccessId=api_po_instrumento_valores&paramcod_uo=%s&paramcod_po=%s&paramcod_contrato=%s&paramcod_convenio=%s&paramcod_categoria=%s&paramcod_fonte=%s"
+    fontes:
+      url: "https://bi.sep.es.gov.br/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/pmo/sigefes_fontes.cda&dataAccessId=sigefes_fontes"
